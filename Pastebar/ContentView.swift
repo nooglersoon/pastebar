@@ -1,5 +1,6 @@
 import SwiftUI
 import UniformTypeIdentifiers
+import ProductLanguageKit
 
 struct ContentView: View {
     var body: some View {
@@ -12,6 +13,8 @@ struct MainView: View {
     @State private var textField: String = ""
     @State private var textLists: [String] = []
     @State private var selectedTab: Int = 0
+    @State private var showSnackbar: Bool = false
+    @State private var showSnackbarCopy: Bool = false
     
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
@@ -22,13 +25,14 @@ struct MainView: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .background(.white)
+                    .background(.clear)
                     .clipShape(
                         RoundedRectangle(cornerRadius: 8)
                     )
                 Button {
                     textLists.append(textField)
                     textField = ""
+                    showSnackbar.toggle()
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.title3)
@@ -41,23 +45,26 @@ struct MainView: View {
             ScrollView(showsIndicators: false) {
                 VStack{
                     ForEach(textLists, id: \.self) { item in
-                        ItemCellView(title: item)
+                        ItemCellView(title: item, isCopyTapped: $showSnackbarCopy)
                         Divider()
                     }
                 }
                 .padding(.vertical)
             }
-            .background(.white)
+            .background(.clear)
             .clipShape(RoundedRectangle(cornerRadius: 8))
         }
         .frame(width: 200, height: 300)
         .padding(16)
+        .snackbar(message: "Success add new item", style: .success, show: $showSnackbar)
+        .snackbar(message: "Success copy to clipboard", style: .success, show: $showSnackbarCopy)
     }
 }
 
 struct ItemCellView: View {
     
     let title: String
+    @Binding var isCopyTapped: Bool
     
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
@@ -71,6 +78,7 @@ struct ItemCellView: View {
                         let pasteboard = NSPasteboard.general
                         pasteboard.declareTypes([.string], owner: nil)
                         pasteboard.setString(title, forType: .string)
+                        isCopyTapped.toggle()
                     }) {
                         RoundedRectangle(cornerRadius: 4)
                             .overlay {
@@ -79,7 +87,7 @@ struct ItemCellView: View {
                                     .foregroundStyle(.black)
                             }
                             .frame(width: 20, height: 20)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.clear)
                     }
                     .buttonStyle(.plain)
                 }

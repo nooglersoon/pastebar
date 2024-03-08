@@ -1,5 +1,4 @@
 import SwiftUI
-import CoreKit
 import UniformTypeIdentifiers
 
 struct ContentView: View {
@@ -18,7 +17,6 @@ struct MainView: View {
         VStack(alignment: .center, spacing: 16) {
             Text("Pastebar")
                 .bold()
-            CoreView()
             HStack {
                 TextField("Search...", text: $textField)
                     .padding(.horizontal, 16)

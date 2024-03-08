@@ -14,7 +14,7 @@
 		860301CF2B99BAA600047F22 /* PastebarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860301CE2B99BAA600047F22 /* PastebarTests.swift */; };
 		860301D92B99BAA600047F22 /* PastebarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860301D82B99BAA600047F22 /* PastebarUITests.swift */; };
 		860301DB2B99BAA600047F22 /* PastebarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860301DA2B99BAA600047F22 /* PastebarUITestsLaunchTests.swift */; };
-		860301ED2B99C60300047F22 /* CoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 860301EC2B99C60300047F22 /* CoreKit */; };
+		862860EE2B9ABBCC00B31E81 /* ProductLanguage in Frameworks */ = {isa = PBXBuildFile; productRef = 862860ED2B9ABBCC00B31E81 /* ProductLanguage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		860301D42B99BAA600047F22 /* PastebarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastebarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860301D82B99BAA600047F22 /* PastebarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastebarUITests.swift; sourceTree = "<group>"; };
 		860301DA2B99BAA600047F22 /* PastebarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastebarUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		860301E82B99BB1800047F22 /* CoreKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreKit; sourceTree = "<group>"; };
+		862860EC2B9AB9B000B31E81 /* ProductLanguage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProductLanguage; path = Packages/ProductLanguage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860301ED2B99C60300047F22 /* CoreKit in Frameworks */,
+				862860EE2B9ABBCC00B31E81 /* ProductLanguage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +137,7 @@
 		860301E72B99BB0F00047F22 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				860301E82B99BB1800047F22 /* CoreKit */,
+				862860EC2B9AB9B000B31E81 /* ProductLanguage */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			);
 			name = Pastebar;
 			packageProductDependencies = (
-				860301EC2B99C60300047F22 /* CoreKit */,
+				862860ED2B9ABBCC00B31E81 /* ProductLanguage */,
 			);
 			productName = Pastebar;
 			productReference = 860301B92B99BAA200047F22 /* Pastebar.app */;
@@ -606,9 +606,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		860301EC2B99C60300047F22 /* CoreKit */ = {
+		862860ED2B9ABBCC00B31E81 /* ProductLanguage */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = CoreKit;
+			productName = ProductLanguage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

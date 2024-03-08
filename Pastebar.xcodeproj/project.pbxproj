@@ -47,6 +47,7 @@
 		860301D82B99BAA600047F22 /* PastebarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastebarUITests.swift; sourceTree = "<group>"; };
 		860301DA2B99BAA600047F22 /* PastebarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastebarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		862860EC2B9AB9B000B31E81 /* ProductLanguage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProductLanguage; path = Packages/ProductLanguage; sourceTree = "<group>"; };
+		862860EF2B9ABC6B00B31E81 /* ProductLanguageKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ProductLanguageKit; path = Packages/ProductLanguageKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +138,7 @@
 		860301E72B99BB0F00047F22 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				862860EF2B9ABC6B00B31E81 /* ProductLanguageKit */,
 				862860EC2B9AB9B000B31E81 /* ProductLanguage */,
 			);
 			name = Packages;

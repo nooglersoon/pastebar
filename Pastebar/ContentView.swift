@@ -1,6 +1,6 @@
 import SwiftUI
 import UniformTypeIdentifiers
-import ProductLanguageKit
+import VisualLanguageKit
 
 struct ContentView: View {
     var body: some View {

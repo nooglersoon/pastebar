@@ -1,7 +1,7 @@
 import XCTest
-@testable import ProductLanguageKit
+@testable import VisualLanguageKit
 
-final class ProductLanguageKitTests: XCTestCase {
+final class VisualLanguageKitTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

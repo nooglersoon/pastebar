@@ -1,0 +1,25 @@
+name: Download File and Commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download file
+        run: curl -L -o https://filesampleshub.com/download/document/txt/sample1.txt
+        # Alternatively, you can use wget
+        # run: wget -O path/to/destination/filename.ext https://example.com/path/to/file.ext
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'nooglersoon'
+          git config --global user.email 'nooglersoon@outlook.co.id'
+          git add ./filename.ext
+          git commit -m "Add downloaded file"
+          git push

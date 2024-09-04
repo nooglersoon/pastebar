@@ -12,9 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download file
-        run: curl -L -o https://filesampleshub.com/download/document/txt/sample1.txt
-        # Alternatively, you can use wget
-        # run: wget -O path/to/destination/filename.ext https://example.com/path/to/file.ext
+        run: curl -L -o ./sample1.txt https://filesampleshub.com/download/document/txt/sample1.txt
 
       - name: Commit changes
         run: |

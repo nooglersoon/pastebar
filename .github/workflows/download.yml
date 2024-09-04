@@ -18,6 +18,6 @@ jobs:
         run: |
           git config --global user.name 'nooglersoon'
           git config --global user.email 'nooglersoon@outlook.co.id'
-          git add ./filename.ext
+          git add ./sample1.txt
           git commit -m "Add downloaded file"
           git push

@@ -14,10 +14,19 @@ jobs:
       - name: Download file
         run: curl -L -o ./sample1.txt https://filesampleshub.com/download/document/txt/sample1.txt
 
-      - name: Commit changes
+      - name: Configure Git
         run: |
           git config --global user.name 'nooglersoon'
           git config --global user.email 'nooglersoon@outlook.co.id'
+
+      - name: Add and Commit Changes
+        run: |
           git add ./sample1.txt
           git commit -m "Add downloaded file"
-          git push https://${{ secrets.PAT_SECRETS }}@github.com/nooglersoon/pastebar.git HEAD:main
+
+      - name: Push Changes
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_SECRETS }}
+        run: |
+          git remote set-url origin https://${{ secrets.PAT_SECRETS }}@github.com/nooglersoon/pastebar.git
+          git push origin HEAD:main

@@ -20,4 +20,4 @@ jobs:
           git config --global user.email 'nooglersoon@outlook.co.id'
           git add ./sample1.txt
           git commit -m "Add downloaded file"
-          git push https://${{ secrets.PAT_TOKEN }}@github.com/nooglersoon/pastebar.git HEAD:main
+          git push https://${{ secrets.PAT_SECRETS }}@github.com/nooglersoon/pastebar.git HEAD:main
